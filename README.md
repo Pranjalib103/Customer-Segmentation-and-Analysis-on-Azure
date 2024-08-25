@@ -1,4 +1,4 @@
-CDAC_FINAL_PROJECT
+# CDAC_FINAL_PROJECT
 
 Utilized Azure Databricks and Python for data integration and preprocessing, creating a comprehensive customer
 segmentation solution.Performed Recency, Frequency, and Monetary (RFM) analysis to identify customer segments
