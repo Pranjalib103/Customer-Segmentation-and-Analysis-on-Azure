@@ -24,13 +24,13 @@ EDA: We performed descriptive statistics and created visualizations like histogr
 #### Feature Engineering:
 In the project we done first RFM analysis  to understand customer behavior by breaking it down into three key metrics are Recency, Frequency, and Monetary. These metrics enable us to segment customers based on their purchasing habits and spending patterns, which is importatnt for targeted marketing and churn prediction.
 In our project, we calculated three key RFM metrics:
-•	Recency: We measured how recently each customer made their last purchase by calculating the number of days since their last transaction.
-•	Frequency: We counted the number of transactions made by each customer in a given time frame.
-•	Monetary: We summed up the total spending for each customer to identify high-value customers.
+1)Recency: We measured how recently each customer made their last purchase by calculating the number of days since their last transaction.
+2)Frequency: We counted the number of transactions made by each customer in a given time frame.
+3)	Monetary: We summed up the total spending for each customer to identify high-value customers.
 Additionally, we labeled customers as churned (1) if they hadn’t made a purchase in the last 6 months, and not churned (0) otherwise. These features were importatnt for building an effective churn prediction model.
 
 #### Model Building:
-##### Clustering for Customer Segmentation:
+##### •Clustering for Customer Segmentation:
 In our project, we used K-Means Clustering to segment customers based on their RFM metrics. To determine the optimal number of clusters, we applied the Elbow Method and identified key segments. Since the data was multi-dimensional, we used PCA to reduce it to 2D, allowing us to visualize the clusters.
 The segmentation revealed four major customer groups:
 1.Champions: Frequent, high-value customers.( These are our most valuable customers who purchase frequently and spend a lot.)
@@ -39,45 +39,45 @@ The segmentation revealed four major customer groups:
 4.Hibernating Customers: Customers who hadn’t purchased recently.indicating they might a churn.. 
 These insights enabled us to develop targeted marketing strategies, improving customer engagement and retention and also maximize revenue.
 
-•	Business Impact:
+Business Impact:
 These customer segments provided actionable insights:
--We targeted Champions with loyalty programs to retain them.
--Big Spenders were offered exclusive discounts to encourage more frequent purchases.
--For Hibernating Customers, we designed reactivation campaigns to bring them back.
+1.We targeted Champions with loyalty programs to retain them.
+2.Big Spenders were offered exclusive discounts to encourage more frequent purchases.
+3.For Hibernating Customers, we designed reactivation campaigns to bring them back.
 
-##### Churn Prediction:
+##### •Churn Prediction:
 In our project, we aimed to predict customer churn. We started with Logistic Regression as a baseline due to its simplicity. Then, we explored more complex models like SVC and Gradient Boosting Classifier. Given the dataset’s imbalance, we applied SMOTE to oversample the minority class, ensuring the model learned patterns for both churned and non-churned customers.
 
 To validate performance, we used K-Fold Cross-Validation and optimized the model through Hyperparameter Tuning. Ultimately, Gradient Boosting gave us the best accuracy of 92%, outperforming other models. This model helped us predict churn effectively, enabling the business to retain high-value customers through targeted interventions..
 ##### Business Impact:
 This model allowed us to:
--Identify high-risk customers early.
--Implement targeted retention strategies, such as personalized offers, which improved customer retention and reduced churn.
+1)Identify high-risk customers early.
+2)Implement targeted retention strategies, such as personalized offers, which improved customer retention and reduced churn.
 
 #### Model Evaluation:
 Once we trained our churn prediction model, the next step was to evaluate its performance using key metrics. This helped us understand how well the model could predict customer churn and identify areas for improvement.
--After evaluating the model, we found:
-•	High Recall: 
+After evaluating the model, we found:
+1)High Recall: 
 Our model was effective at identifying most churned customers, which is crucial since missing an at-risk customer could result in lost revenue.
-•	Balanced F1-Score: 
+2)Balanced F1-Score: 
 
 This indicated the model maintained a good trade-off between precision and recall, minimizing both false positives and false negatives.
--Insights:
+##### Insights:
 We used the model's predictions to identify which customer segments were at the highest risk of churning. For instance:
-•	Hibernating Customers: 
+1.Hibernating Customers: 
 Had high recency and low frequency, meaning they hadn’t engaged recently.
-•	Big Spenders at Risk: 
+2.Big Spenders at Risk: 
 Customers who historically spent a lot but showed declining engagement.
 These insights helped us target specific segments with personalized retention strategies, such as offering discounts or loyalty rewards to high-risk, high-value customers.
 
 #### Marketing strategies:
--Based on our customer segmentation and churn predictions, we developed targeted marketing strategies. For Champions, we focused on loyalty rewards and exclusive offers to retain their engagement. 
--For Big Spenders, we used targeted reminders and upselling opportunities. Hibernating Customers were re-engaged through win-back campaigns offering exclusive discounts, while At-Risk Customers received personalized incentives to reduce their likelihood of churning.
--By aligning our strategies with customer behaviors and churn risks, we optimized retention efforts, increased revenue from high-value customers, and reduced churn rates.
--These strategies helped:
-•	Retain high-value customers, boosting revenue from loyal segments.
-•	Re-engage at-risk customers, reducing churn and improving customer lifetime value.
-•	Optimize marketing spend by focusing efforts on the most impactful customer groups.
+Based on our customer segmentation and churn predictions, we developed targeted marketing strategies. For Champions, we focused on loyalty rewards and exclusive offers to retain their engagement. 
+For Big Spenders, we used targeted reminders and upselling opportunities. Hibernating Customers were re-engaged through win-back campaigns offering exclusive discounts, while At-Risk Customers received personalized incentives to reduce their likelihood of churning.
+By aligning our strategies with customer behaviors and churn risks, we optimized retention efforts, increased revenue from high-value customers, and reduced churn rates.
+These strategies helped:
+1.Retain high-value customers, boosting revenue from loyal segments.
+2.Re-engage at-risk customers, reducing churn and improving customer lifetime value.
+3.Optimize marketing spend by focusing efforts on the most impactful customer groups.
 
 #### Deployment:
 In the deployment phase, we set up Azure Blob Storage to store our data securely and scalably. We then configured an Azure Databricks workspace, where we deployed our churn prediction and customer segmentation models. This allowed us to generate real-time predictions using live customer data.
@@ -85,10 +85,10 @@ We also integrated these models with marketing tools like CRM systems, enabling 
 
 #### Insights and Result:
 Clustering revealed distinct customer segments:
--Champions: High spending, frequent purchasers.
--Loyal Customers: Regular buyers with moderate spending.
--Big Spenders: High monetary value but less frequent purchases.
--Hibernating: Customers who haven’t purchased recently.
+1)Champions: High spending, frequent purchasers.
+2)Loyal Customers: Regular buyers with moderate spending.
+3)Big Spenders: High monetary value but less frequent purchases.
+4)Hibernating: Customers who haven’t purchased recently.
 The churn prediction model identified at-risk customers with high accuracy.
 
 #### Challenges :
@@ -98,6 +98,6 @@ Model Overfitting: Mitigated through hyperparameter tuning and cross-validation.
 Azure Deployment: Required meticulous setup for seamless model integration.
 
 #### Future Scope:
-Enhanced Personalization: Use AI to refine customer segments and predict individual behavior.
-Real-Time Data Processing: Ingest and process live data streams in Azure Databricks for dynamic segmentation.
-Geospatial Analysis: Include location data for regional strategy optimization.
+1)Enhanced Personalization: Use AI to refine customer segments and predict individual behavior.
+2)Real-Time Data Processing: Ingest and process live data streams in Azure Databricks for dynamic segmentation.
+3)Geospatial Analysis: Include location data for regional strategy optimization.
