@@ -1,7 +1,4 @@
 # CDAC_FINAL_PROJECT
 
-Utilized Azure Databricks and Python for data integration and preprocessing, creating a comprehensive customer
-segmentation solution.Performed Recency, Frequency, and Monetary (RFM) analysis to identify customer segments
-and enhance targeting strategies.Applied K-Means clustering to segment customers based on transactional and
-demographic data, improving marketing efforts.Developed interactive dashboards with Power BI to visualize
-segment profiles and support data-driven decision-making.
+ # Title: Customer Segmentation Analysis: Uncovering Key Insights Using Azure Databricks
+ # Objective: This project was aimed at helping the business better understand customer behavior and optimize marketing strategies. By segmenting the customer base, we enabled the company to create targeted campaigns, improving customer engagement and retention.
